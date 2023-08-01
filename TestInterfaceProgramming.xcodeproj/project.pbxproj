@@ -13,6 +13,7 @@
 		0778914A2A783FCC00E4173E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 077891492A783FCC00E4173E /* Assets.xcassets */; };
 		0778914D2A783FCC00E4173E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0778914B2A783FCC00E4173E /* LaunchScreen.storyboard */; };
 		077891552A785BC500E4173E /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077891542A785BC500E4173E /* TaskViewController.swift */; };
+		0778915B2A78915500E4173E /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0778915A2A78915500E4173E /* ButtonFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		0778914C2A783FCC00E4173E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0778914E2A783FCC00E4173E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		077891542A785BC500E4173E /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		0778915A2A78915500E4173E /* ButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				077891422A783FCB00E4173E /* SceneDelegate.swift */,
 				077891442A783FCB00E4173E /* TaskListViewController.swift */,
 				077891542A785BC500E4173E /* TaskViewController.swift */,
+				0778915A2A78915500E4173E /* ButtonFactory.swift */,
 				077891492A783FCC00E4173E /* Assets.xcassets */,
 				0778914B2A783FCC00E4173E /* LaunchScreen.storyboard */,
 				0778914E2A783FCC00E4173E /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				077891452A783FCB00E4173E /* TaskListViewController.swift in Sources */,
+				0778915B2A78915500E4173E /* ButtonFactory.swift in Sources */,
 				077891552A785BC500E4173E /* TaskViewController.swift in Sources */,
 				077891412A783FCB00E4173E /* AppDelegate.swift in Sources */,
 				077891432A783FCB00E4173E /* SceneDelegate.swift in Sources */,

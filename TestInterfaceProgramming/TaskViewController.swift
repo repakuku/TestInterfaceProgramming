@@ -32,16 +32,13 @@ final class TaskViewController: UIViewController {
     }()
     
     private lazy var cancelButton: UIButton = {
-        var attributes = AttributeContainer()
-        attributes.font = .boldSystemFont(ofSize: 18)
-        var buttonConfig = UIButton.Configuration.filled()
-        buttonConfig.buttonSize = .medium
-        buttonConfig.attributedTitle = AttributedString("Cancel Task", attributes: attributes)
-        buttonConfig.baseBackgroundColor = UIColor(named: "MainRed")
-        let button = UIButton(configuration: buttonConfig, primaryAction: UIAction { [unowned self] _ in
-            dismiss(animated: true)
-        })
-        button.translatesAutoresizingMaskIntoConstraints = false
+        let filledButtonFactory = FilledButtonFactory(
+            title: "Cancel",
+            color: UIColor(named: "MainRed") ?? .systemRed,
+            action: UIAction { [unowned self] _ in
+                dismiss(animated: true)
+            })
+        let button = filledButtonFactory.createButton()
         return button
     }()
 
