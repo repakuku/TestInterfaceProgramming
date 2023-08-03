@@ -9,10 +9,13 @@ import UIKit
 
 final class TaskListViewController: UITableViewController {
 
+    private let cellID = "task"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
         setupNavigationBar()
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellID)
     }
     
     @objc private func addNewTask() {
@@ -47,3 +50,14 @@ private extension TaskListViewController {
     }
 }
 
+// MARK: - UITableViewDataSource
+extension TaskListViewController {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        return UITableViewCell()
+    }
+}
