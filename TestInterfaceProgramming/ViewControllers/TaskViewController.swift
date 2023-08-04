@@ -13,6 +13,8 @@ final class TaskViewController: UIViewController {
     
     private let storageManager = StorageManager.shared
     
+    var task: Task?
+    
     private lazy var taskTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
@@ -53,6 +55,10 @@ final class TaskViewController: UIViewController {
         view.backgroundColor = .white
         setupSubviews(taskTextField, saveButton, cancelButton)
         setupConstraints()
+        
+        if let task {
+            taskTextField.text = task.title
+        }
     }
     
     private func setupSubviews(_ subviews: UIView...) {
@@ -88,8 +94,13 @@ final class TaskViewController: UIViewController {
     }
     
     private func save() {
-        storageManager.save(taskTextField.text ?? "") { task in
-            print(task.title ?? "")
+        if let task {
+            let newTitle = taskTextField.text ?? ""
+            storageManager.update(task, with: newTitle)
+        } else {
+            storageManager.save(taskTextField.text ?? "") { task in
+                print(task.title ?? "")
+            }
         }
         delegate.reloadData()
         dismiss(animated: true)

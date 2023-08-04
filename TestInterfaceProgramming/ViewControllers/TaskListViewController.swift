@@ -95,6 +95,18 @@ extension TaskListViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
+
+extension TaskListViewController {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let taskVC = TaskViewController()
+        let task = tasks[indexPath.row]
+        taskVC.delegate = self
+        taskVC.task = task
+        present(taskVC, animated: true)
+    }
+}
+
 // MARK: - TaskViewControllerDelegate
 extension TaskListViewController: TaskViewControllerDelegate {
     func reloadData() {

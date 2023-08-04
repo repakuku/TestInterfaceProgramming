@@ -62,18 +62,74 @@
 		0778913F2A783FCB00E4173E /* TestInterfaceProgramming */ = {
 			isa = PBXGroup;
 			children = (
-				077891402A783FCB00E4173E /* AppDelegate.swift */,
-				077891422A783FCB00E4173E /* SceneDelegate.swift */,
-				07D707102A7C3F71002D37B9 /* Storage Manager.swift */,
-				077891442A783FCB00E4173E /* TaskListViewController.swift */,
-				077891542A785BC500E4173E /* TaskViewController.swift */,
-				0778915A2A78915500E4173E /* ButtonFactory.swift */,
-				077891492A783FCC00E4173E /* Assets.xcassets */,
-				0778914B2A783FCC00E4173E /* LaunchScreen.storyboard */,
-				0778914E2A783FCC00E4173E /* Info.plist */,
-				07D7070D2A7C3D02002D37B9 /* TestInterfaceProgramming.xcdatamodeld */,
+				07BC7C962A7C8FB800720611 /* App */,
+				07BC7C972A7C8FC000720611 /* Services */,
+				07BC7C982A7C8FC900720611 /* ViewControllers */,
+				07BC7C992A7C8FD500720611 /* Factory */,
+				07BC7C9A2A7C8FF800720611 /* Resources */,
+				07BC7C9B2A7C900800720611 /* Storyboards */,
+				07BC7C9C2A7C901200720611 /* Storage */,
 			);
 			path = TestInterfaceProgramming;
+			sourceTree = "<group>";
+		};
+		07BC7C962A7C8FB800720611 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				077891402A783FCB00E4173E /* AppDelegate.swift */,
+				077891422A783FCB00E4173E /* SceneDelegate.swift */,
+				0778914E2A783FCC00E4173E /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		07BC7C972A7C8FC000720611 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				07D707102A7C3F71002D37B9 /* Storage Manager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		07BC7C982A7C8FC900720611 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				077891442A783FCB00E4173E /* TaskListViewController.swift */,
+				077891542A785BC500E4173E /* TaskViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		07BC7C992A7C8FD500720611 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				0778915A2A78915500E4173E /* ButtonFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		07BC7C9A2A7C8FF800720611 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				077891492A783FCC00E4173E /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07BC7C9B2A7C900800720611 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				0778914B2A783FCC00E4173E /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		07BC7C9C2A7C901200720611 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				07D7070D2A7C3D02002D37B9 /* TestInterfaceProgramming.xcdatamodeld */,
+			);
+			path = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6PNGGFV6BC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestInterfaceProgramming/Info.plist;
+				INFOPLIST_FILE = TestInterfaceProgramming/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -325,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6PNGGFV6BC;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TestInterfaceProgramming/Info.plist;
+				INFOPLIST_FILE = TestInterfaceProgramming/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
