@@ -9,6 +9,10 @@ import UIKit
 
 final class TaskViewController: UIViewController {
     
+    unowned var delegate: TaskViewControllerDelegate!
+    
+    private let storageManager = StorageManager.shared
+    
     private lazy var taskTextField: UITextField = {
         let textField = UITextField()
         textField.borderStyle = .roundedRect
@@ -24,8 +28,10 @@ final class TaskViewController: UIViewController {
         buttonConfig.buttonSize = .medium
         buttonConfig.attributedTitle = AttributedString("Save Task", attributes: attributes)
         buttonConfig.baseBackgroundColor = UIColor(named: "MainBlue")
-        let button = UIButton(configuration: buttonConfig, primaryAction: UIAction { [unowned self] _ in
-            dismiss(animated: true)
+        let button = UIButton(
+            configuration: buttonConfig,
+            primaryAction: UIAction { [unowned self] _ in
+            save()
         })
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
@@ -79,5 +85,13 @@ final class TaskViewController: UIViewController {
                 cancelButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40)
             ]
         )
+    }
+    
+    private func save() {
+        storageManager.save(taskTextField.text ?? "") { task in
+            print(task.title ?? "")
+        }
+        delegate.reloadData()
+        dismiss(animated: true)
     }
 }
